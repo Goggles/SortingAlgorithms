@@ -7,9 +7,11 @@ def bubble_sort(list):
     while not is_sorted:
 	is_sorted = True
 	for i in xrange(length):
-	    if list[i] > list[i + 1]:
+	    if list[i] > list[i + 1]: #check the list item is greater than the next one
+		#the list isn't sorted
 		is_sorted = False
-		hold = list[i + 1]
+		#re-arrange list elements accordingly
+		hold = list[i + 1] 
 		list[i + 1] = list[i]
 		list[i] = hold
 
