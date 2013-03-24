@@ -1,5 +1,3 @@
-my_list = [12, 10, 5, 18, 44, 1]
-
 def bubble_sort(list):
     i = 0
     is_sorted = False
@@ -14,6 +12,17 @@ def bubble_sort(list):
 		hold = list[i + 1] 
 		list[i + 1] = list[i]
 		list[i] = hold
+
+my_list = []
+
+while True:
+	input = raw_input("Enter a number to be added to the list (enter sort to end adding and sort the list): ")
+	if input == 'sort':
+		break
+	elif input.isdigit():
+		my_list.append(input)
+	else:
+		print "Please enter a number, or sort."
 
 bubble_sort(my_list)
 print my_list
